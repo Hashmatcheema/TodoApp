@@ -1,63 +1,87 @@
-html, body {
-	position: relative;
-	width: 100%;
-	height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+:root {
+  --primary-color: #b42b51;
+  --bg-color: #eef0f1;
+  --white-color: #fff;
+  --border-color: #d7d9d9;
+  --title-color: #08090a;
+  --text-color: #3d3d3d;
+  --hover-primary-color: #7d1935;
+  --radius: 5px;
+  --shadow: 0 0 0 1px rgba(8, 9, 10, 0.1);
+  --border: 1px solid var(--border-color);
+  --success-bg-color: #d4edda;
+  --success-border: 1px solid #c3e6cb;
+  --success-color: #155724;
+  --error-bg-color: #f8d7da;
+  --error-border: 1px solid #f5c6cb;
+  --error-color: #721c24;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	color: #333;
-	margin: 0;
-	padding: 8px;
-	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  background-color: var(--bg-color);
+  padding: 15px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.7;
+  height: 100vh;
+  z-index: 0;
 }
 
-a {
-	color: rgb(0,100,200);
-	text-decoration: none;
+.util {
+  background-color: var(--white-color);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 10px 20px;
 }
 
-a:hover {
-	text-decoration: underline;
+.title-1 {
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+.title-2 {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--title-color);
 }
 
-a:visited {
-	color: rgb(0,80,160);
+.btn {
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  border-radius: var(--radius);
 }
 
-label {
-	display: block;
+.primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
 
-input, button, select, textarea {
-	font-family: inherit;
-	font-size: inherit;
-	-webkit-padding: 0.4em 0;
-	padding: 0.4em;
-	margin: 0 0 0.5em 0;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 2px;
+.primary:hover {
+  background-color: var(--hover-primary-color);
+  color: var(--white-color);
 }
 
-input:disabled {
-	color: #ccc;
+.secondary {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--title-color);
 }
 
-button {
-	color: #333;
-	background-color: #f4f4f4;
-	outline: none;
-}
-
-button:disabled {
-	color: #999;
-}
-
-button:not(:disabled):active {
-	background-color: #ddd;
-}
-
-button:focus {
-	border-color: #666;
+.secondary:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--title-color);
 }
